@@ -1,7 +1,7 @@
 # Ambiente para Ruby on Rails 5.x com docker
 
 A fim de utilizar durante o [curso](https://www.udemy.com/course/rubyonrails-5x)
-um ambiente mais próximo do utilizado no dia-a-dia
+um ambiente mais próximo do utilizado no dia-a-dia.
 
 ## Construindo imagem
 
@@ -37,15 +37,16 @@ container e vice-versa.
 docker run --rm -it -p 3000:3000 -v "$(pwd):/app" -w "/app" rorv5_x bash
 ```
 
-- `-p 3000:3000`: Indica que será mapeada a porta 3000
+- `-p 3000:3000`: Indica que será mapeada a porta 3000 da sua máquina com a 3000
+do container;
 - `-v "$(pwd):/app"`: Indica que será criado um volume com o diretório onde o
 comando está sendo executado e um diretório `app` na raiz do container;
 - `-w "/app"`: Indica qual será a diretório de trabalho do container, este local
-é onde será executado o comando que será para para o container.
+é onde será executado o comando que será passado para para o container.
 
 ### Iniciar aplicação rails
 
-Obs.: Necessário ter criado container com no mínimo volume e porta mapeados.
+Obs.: Necessário ter criado container com no mínimo o mapeamento de volume e porta.
 
 ```bash
 yarn install
